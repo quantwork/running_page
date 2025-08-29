@@ -25,27 +25,27 @@ on:
 
 env:
   # —— 数据源：用 COROS ——
-  RUN_TYPE: coros   # 支持 strava/nike/garmin/coros/...；此处必须为 coros
+  RUN_TYPE: coros
 
-  # —— 页面展示（按需改）——
-  ATHLETE: 陈宇俊
-  TITLE: 陈宇俊的 Running Page
+  # —— 页面展示（你给的配置）——
+  ATHLETE: "陈宇俊"
+  TITLE: "陈宇俊的 Running Page"
   MIN_GRID_DISTANCE: 10
-  TITLE_GRID: Over 10km Runs
+  TITLE_GRID: "Over 10km Runs"
 
-  # —— 轨迹隐私（按需改；默认保持与你原来一样）——
+  # —— 轨迹隐私 —— 
   # IGNORE_BEFORE_SAVING: True
-  IGNORE_START_END_RANGE: 10      # 起终点模糊半径，单位：米（建议 100–300 更安全）
-  IGNORE_POLYLINE: 'ktjrFoemeU~IorGq}DeB'   # 可留空；不需要就注释掉
-  IGNORE_RANGE: 10                # 额外模糊半径，单位：米
+  IGNORE_START_END_RANGE: 10
+  # IGNORE_POLYLINE: 'ktjrFoemeU~IorGq}DeB'
+  IGNORE_RANGE: 10
 
   # —— 构建与缓存 —— 
   SAVE_DATA_IN_GITHUB_CACHE: false
   DATA_CACHE_PREFIX: 'track_data'
   BUILD_GH_PAGES: true
-  SAVE_TO_PARQENT: false          # 保持和你仓库中的变量名一致
+  # 拼写易错，模板里先去掉这个变量；需要保存为 parquet 时再单独配置
   GENERATE_MONTH_OF_LIFE: true
-  BIRTHDAY_MONTH: 1984-11         # 按 YYYY-MM 改成你自己的生日月份
+  BIRTHDAY_MONTH: "1984-11"
 
 
 jobs:
